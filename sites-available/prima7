@@ -8,12 +8,12 @@ server {
     ## was stolen from the wikipedia page on IPv6.
     #listen [::]:8080 ipv6only=on;
 
-    server_name ps7.mirage rep7.mirage;
+    server_name primasupply.com;
     limit_conn arbeit 32;
 
     ## Access and error logs.
-    access_log /var/log/nginx/ps7.mirage_access.log;
-    error_log /var/log/nginx/ps7.mirage_error.log;
+    access_log /var/log/nginx/primasupply.com_access.log;
+    error_log /var/log/nginx/primasupply.com_error.log;
 
     ## See the blacklist.conf file at the parent dir: /etc/nginx.
     ## Deny access based on the User-Agent header.
@@ -111,12 +111,12 @@ server {
     ## Uncomment the line below if you're using SPDY.
     #listen [::]:443 ssl spdy ipv6only=on;
 
-    server_name ps7.mirage rep7.mirage;
+    server_name primasupply.com;
     limit_conn arbeit 32;
 
     ## Access and error logs.
-    access_log /var/log/nginx/ps7.mirage_access.log;
-    error_log /var/log/nginx/ps7.mirage_error.log;
+    access_log /var/log/nginx/primasupply.com_access.log;
+    error_log /var/log/nginx/primasupply.com_error.log;
 
     ## See the blacklist.conf file at the parent dir: /etc/nginx.
     ## Deny access based on the User-Agent header.
@@ -139,8 +139,8 @@ server {
 
     ## See the keepalive_timeout directive in nginx.conf.
     ## Server certificate and key.
-    ssl_certificate /etc/ssl/certs/ps7.mirage.crt;
-    ssl_certificate_key /etc/ssl/private/ps7.mirage.key;
+    ssl_certificate /etc/ssl/certs/primasupply.com.crt;
+    ssl_certificate_key /etc/ssl/private/primasupply.com.key;
 
     ## Strict Transport Security header for enhanced security. See
     ## http://www.chromium.org/sts. I've set it to 2 hours; set it to
