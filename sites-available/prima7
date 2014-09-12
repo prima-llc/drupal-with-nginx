@@ -6,7 +6,7 @@ server {
     listen 8080; # IPv4
     ## Replace the IPv6 address by your own address. The address below
     ## was stolen from the wikipedia page on IPv6.
-    listen [::1]:8080 ipv6only=on;
+    #listen [::]:8080 ipv6only=on;
 
     server_name ps7.mirage rep7.mirage;
     limit_conn arbeit 32;
@@ -107,9 +107,9 @@ server {
     ## was stolen from the wikipedia page on IPv6.
 
     ## Comment the line below if you're using SPDY.
-    listen [::1]:443 ssl ipv6only=on;
+    #listen [::]:443 ssl ipv6only=on;
     ## Uncomment the line below if you're using SPDY.
-    #listen [::1]:443 ssl spdy ipv6only=on;
+    #listen [::]:443 ssl spdy ipv6only=on;
 
     server_name ps7.mirage rep7.mirage;
     limit_conn arbeit 32;
