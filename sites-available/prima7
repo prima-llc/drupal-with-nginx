@@ -100,9 +100,9 @@ server {
 ## HTTPS server.
 server {
     ## Comment the line below if you're using SPDY.
-    listen 443 ssl;
+    #listen 443 ssl;
     ## Uncomment the line below if you're using SPDY.
-    #listen 443 ssl spdy;
+    listen 443 ssl spdy;
     ## Replace the IPv6 address by your own address. The address below
     ## was stolen from the wikipedia page on IPv6.
 
