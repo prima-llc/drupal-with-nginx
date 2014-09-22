@@ -1,6 +1,15 @@
 # -*- mode: nginx; mode: flyspell-prog;  ispell-current-dictionary: american -*-
 ### Configuration for example.com.
 
+## Redirect HTTP to HTTPS
+server {
+    listen 81;
+
+    server_name testing.prima-coffee.com;
+
+    return 301 https://$host$request_uri;
+}
+
 ## HTTP server.
 server {
     listen 8080; # IPv4
@@ -8,7 +17,7 @@ server {
     ## was stolen from the wikipedia page on IPv6.
     #listen [::]:8080 ipv6only=on;
 
-    server_name testing.prima-coffee.com
+    server_name testing.prima-coffee.com;
     limit_conn arbeit 32;
 
     ## Access and error logs.
