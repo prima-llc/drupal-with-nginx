@@ -4,10 +4,17 @@
 ### a suggestion by Maxim Dounin. Also suggested in
 ### http://nginx.org/en/docs/http/request_processing.html#how_to_prevent_undefined_server_names.
 server {
-    listen 80 default_server; # IPv4
+    listen 81 default_server;
+
+    server_name _;
+    return 444;
+}
+
+server {
+    listen 8080 default_server; # IPv4
     ## Socket options can only be specified once, hence the different
     ## address for the 'default' server.
-    listen [::1]:80 default_server ipv6only=on; # IPv6
+    listen [::1]:8080 default_server ipv6only=on; # IPv6
 
     server_name _;
     return 444;
